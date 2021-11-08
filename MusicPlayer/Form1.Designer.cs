@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.listBoxSongs = new System.Windows.Forms.ListBox();
             this.btnSelectSongs = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -51,16 +51,6 @@
             this.TopPanel.Size = new System.Drawing.Size(577, 34);
             this.TopPanel.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Splash", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 14);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Music Player App";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -71,6 +61,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Splash", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 14);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Music Player App";
             // 
             // listBoxSongs
             // 
@@ -91,6 +91,7 @@
             this.btnSelectSongs.TabIndex = 2;
             this.btnSelectSongs.Text = "Select Songs";
             this.btnSelectSongs.UseVisualStyleBackColor = false;
+            this.btnSelectSongs.Click += new System.EventHandler(this.btnSelectSongs_Click);
             // 
             // axWindowsMediaPlayer1
             // 

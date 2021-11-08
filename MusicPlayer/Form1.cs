@@ -16,9 +16,29 @@ namespace MusicPlayer
         {
             InitializeComponent();
         }
+        string[] paths, files;
+
+        private void btnSelectSongs_Click(object sender, EventArgs e)
+        {
+            //Code to select song
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Multiselect = true;
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                files = ofd.SafeFileNames;//Save the names of the track in files
+                paths = ofd.FileNames;//Save the paths of the track in path
+
+                for(int i = 0; i < files.Length; i++)
+                {
+                    listBoxSongs.Items.Add(files[i]);
+                }
+            }
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            //the to Close the App
             this.Close();
         }
     }
