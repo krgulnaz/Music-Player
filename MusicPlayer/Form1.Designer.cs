@@ -34,10 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBoxSongs = new System.Windows.Forms.ListBox();
             this.btnSelectSongs = new System.Windows.Forms.Button();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.axWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -75,39 +75,40 @@
             // listBoxSongs
             // 
             this.listBoxSongs.FormattingEnabled = true;
-            this.listBoxSongs.Location = new System.Drawing.Point(411, 44);
+            this.listBoxSongs.Location = new System.Drawing.Point(346, 44);
             this.listBoxSongs.Name = "listBoxSongs";
-            this.listBoxSongs.Size = new System.Drawing.Size(152, 199);
+            this.listBoxSongs.Size = new System.Drawing.Size(217, 199);
             this.listBoxSongs.TabIndex = 1;
+            this.listBoxSongs.SelectedIndexChanged += new System.EventHandler(this.listBoxSongs_SelectedIndexChanged);
             // 
             // btnSelectSongs
             // 
             this.btnSelectSongs.BackColor = System.Drawing.Color.Salmon;
             this.btnSelectSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectSongs.ForeColor = System.Drawing.Color.White;
-            this.btnSelectSongs.Location = new System.Drawing.Point(411, 249);
+            this.btnSelectSongs.Location = new System.Drawing.Point(346, 249);
             this.btnSelectSongs.Name = "btnSelectSongs";
-            this.btnSelectSongs.Size = new System.Drawing.Size(152, 35);
+            this.btnSelectSongs.Size = new System.Drawing.Size(217, 35);
             this.btnSelectSongs.TabIndex = 2;
             this.btnSelectSongs.Text = "Select Songs";
             this.btnSelectSongs.UseVisualStyleBackColor = false;
             this.btnSelectSongs.Click += new System.EventHandler(this.btnSelectSongs_Click);
             // 
-            // axWindowsMediaPlayer1
+            // axWindowsMediaPlayer
             // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 44);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(393, 240);
-            this.axWindowsMediaPlayer1.TabIndex = 3;
+            this.axWindowsMediaPlayer.Enabled = true;
+            this.axWindowsMediaPlayer.Location = new System.Drawing.Point(12, 44);
+            this.axWindowsMediaPlayer.Name = "axWindowsMediaPlayer";
+            this.axWindowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer.OcxState")));
+            this.axWindowsMediaPlayer.Size = new System.Drawing.Size(328, 240);
+            this.axWindowsMediaPlayer.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 298);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.axWindowsMediaPlayer);
             this.Controls.Add(this.btnSelectSongs);
             this.Controls.Add(this.listBoxSongs);
             this.Controls.Add(this.TopPanel);
@@ -119,7 +120,7 @@
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,7 +132,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBoxSongs;
         private System.Windows.Forms.Button btnSelectSongs;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer;
     }
 }
 
